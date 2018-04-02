@@ -1,3 +1,61 @@
 page-home {
+    .content{
+        padding:20px;
+    }
+    .bg-layer{
+        height: 100%;
+        background-image: url('../assets/imgs/wall1.jpg');
+        &:after{
+            content:'';
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color:#8a63b3;
+            opacity: 0.8;
+        }
+        .content{
+            position: relative;
+            z-index: 2;
+            padding: 20px 42px;
 
+            .welcome-msg{
+                padding: 35px;
+                text-align: center;
+                border-radius: 5px 5px 0 0;
+                background-color: white;
+                margin-top: 28px;
+
+                .title{
+                    //font-family: lato;
+                    //font-weight: 500;
+                    /* letter-spacing: 1px; */
+                    padding-bottom: 15px;
+                    border-bottom: 2px solid #3431f9;
+                }
+                .description{
+                    text-align: justify;
+                    color: #8c8c8c;
+                   // font-family: roboto;
+                }
+            }
+            .news-slider{
+                text-align: center;
+                padding: 20px;
+                background-color: #ececec;
+            }
+            .help-row{
+                background-color: white;
+                .help-card{
+                    padding: 20px;
+                    background-color: white;
+                    color: #03A9F4;
+                    border-radius: 0 0 0 5px;
+                    border: 2px solid #ececec;
+                }
+            }
+
+        }
+    }
 }

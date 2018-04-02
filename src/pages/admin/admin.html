@@ -1,0 +1,30 @@
+<!--
+  Generated template for the AdminPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>admin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <ion-item *ngFor="let user of newUsers">
+    <ion-thumbnail item-start>
+      <img src="assets/imgs/admin.png">
+    </ion-thumbnail>
+    <h2>{{user.name}}</h2>
+    <p>20 hours ago</p>
+    <button ion-button icon-left  ion-button clear item-end color="secondary" (click)="activateUser(user.id)" ng-disabled="user.activated">
+	  <ion-icon name="{{ (user.activated)?'checkmark-circle':'ios-checkmark' }}"></ion-icon>
+	  {{ (user.activated)?'activated':'activate' }}
+	</button>
+  </ion-item>
+</ion-list>
+</ion-content>
