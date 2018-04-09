@@ -18,6 +18,7 @@ export class FcMserviceProvider {
   set_fcm_token(id,token){
 
     return new Promise(resolve => {
+     // alert(this.commonService.REST_URL+'fcm/set_fcm_token/'+id+'/'+token);
       this.http.get(this.commonService.REST_URL+'fcm/set_fcm_token/'+id+'/'+token).subscribe(data => {
         resolve(data);
       }, err => {

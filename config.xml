@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="mad.zero.slcog" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="mad.zero.slcogx" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>geno</name>
     <description>Instant Feed for slcog</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Madhawa Priyashantha</author>
+    <author email="madhawapriyashantha@gmail.com" href="http://ionicframework.com/">Madhawa Priyashantha</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -84,5 +84,5 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
     <allow-navigation href="http://192.168.8.100:8100" />
-    <engine name="android" spec="~6.3.0" />
+    <engine name="android" spec="^6.3.0" />
 </widget>

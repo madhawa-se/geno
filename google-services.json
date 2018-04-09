@@ -2,7 +2,8 @@
   "project_info": {
     "project_number": "813584209968",
     "firebase_url": "https://seraphic-heaven-438.firebaseio.com",
-    "project_id": "seraphic-heaven-438"
+    "project_id": "seraphic-heaven-438",
+    "storage_bucket": "seraphic-heaven-438.appspot.com"
   },
   "client": [
     {
@@ -10,6 +11,37 @@
         "mobilesdk_app_id": "1:813584209968:android:c2ece829b34c90bb",
         "android_client_info": {
           "package_name": "mad.zero.slcog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813584209968-di3hir4u3gi9okkn0mfu32sabh2eccrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe17thGBYq1jtP39mncVxwJ4FY_eVzWQ0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813584209968:android:011dddeb9beb3b14",
+        "android_client_info": {
+          "package_name": "mad.zero.slcogx"
         }
       },
       "oauth_client": [

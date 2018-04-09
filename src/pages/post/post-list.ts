@@ -28,7 +28,6 @@ export class PostListPage {
    get_posts() {  	
     this.postServiceProvider.getPosts().then((result) => {
     	this.stories=result;
-    	console.log(this.stories);
        console.log(result); 
     }, (err) => {
        console.log(err); 

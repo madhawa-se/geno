@@ -29,10 +29,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Sign in', component: LoginPage },
-      { title: 'Sign up', component: SignupPage },
-      { title: 'Home', component: HomePage },
-      { title: 'Profile Page', component: ProfilePage },
+      { title: 'Sign In', component: LoginPage ,icon:'log-in' },
+      { title: 'Sign Up', component: SignupPage,icon:'log-out' },
+      { title: 'Home', component: HomePage ,icon:'home'},
+      { title: 'Profile Page', component: ProfilePage,icon:'contact' },
     ];
     var self=this;
 
@@ -40,13 +40,12 @@ export class MyApp {
       if(user){
 
         if(user.is_verified==2 && user.user_type==1){
-          self.pages.push({ title: 'Admin', component: AdminPage });
-          self.pages.push({ title: 'Post Page', component: PostPage });
-          self.pages.push( { title: 'Post Page', component: PostPage  });
-          self.pages.push( { title: 'Browse News', component: PostListPage });
+          self.pages.push({ title: 'Admin', component: AdminPage ,icon:'ion-disc'});
+          self.pages.push( { title: 'Post Page', component: PostPage ,icon:'ion-disc' });
+          self.pages.push( { title: 'Browse News', component: PostListPage,icon:'ion-disc' });
         }
         else if(user.is_verified==2 && user.user_type==0){
-          self.pages.push( { title: 'Browse News', component: PostListPage });
+          self.pages.push( { title: 'Browse News', component: PostListPage,icon:'ion-disc' });
         }
       }else{
 
