@@ -25691,6 +25691,19 @@ button {
   display: none !important;
 }
 
+ion-menu ion-content {
+  background-color: #07da5f !important;
+}
+
+ion-menu ion-content ion-list .item {
+  background-color: transparent;
+  color: white;
+}
+
+ion-menu ion-content ion-list ion-icon {
+  padding-right: 15px;
+}
+
 page-home .content {
   padding: 20px;
 }

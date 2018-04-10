@@ -31,3 +31,19 @@ button {
 .back-button-text {
     display: none !important;
 }
+
+ion-menu{
+	ion-content{
+		background-color: #07da5f !important;
+		ion-list{
+			.item{
+				background-color: transparent;
+				color: white;
+			}
+			
+			ion-icon{
+				padding-right: 15px;
+			}
+		}
+	}
+}

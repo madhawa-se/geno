@@ -32,7 +32,7 @@ export class MyApp {
       { title: 'Sign In', component: LoginPage ,icon:'log-in' },
       { title: 'Sign Up', component: SignupPage,icon:'log-out' },
       { title: 'Home', component: HomePage ,icon:'home'},
-      { title: 'Profile Page', component: ProfilePage,icon:'contact' },
+      { title: 'Profile', component: ProfilePage,icon:'contact' },
     ];
     var self=this;
 
@@ -40,12 +40,12 @@ export class MyApp {
       if(user){
 
         if(user.is_verified==2 && user.user_type==1){
-          self.pages.push({ title: 'Admin', component: AdminPage ,icon:'ion-disc'});
-          self.pages.push( { title: 'Post Page', component: PostPage ,icon:'ion-disc' });
-          self.pages.push( { title: 'Browse News', component: PostListPage,icon:'ion-disc' });
+          self.pages.push({ title: 'Dash Board', component: AdminPage ,icon:'analytics'});
+          self.pages.push( { title: 'New Post', component: PostPage ,icon:'create' });
+          self.pages.push( { title: 'Browse Posts', component: PostListPage,icon:'paper' });
         }
         else if(user.is_verified==2 && user.user_type==0){
-          self.pages.push( { title: 'Browse News', component: PostListPage,icon:'ion-disc' });
+          self.pages.push( { title: 'Browse Posts', component: PostListPage,icon:'paper' });
         }
       }else{
 
