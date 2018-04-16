@@ -1,5 +1,6 @@
 page-post-list {
-  $grid-padding-width:         1px !default;
+  $grid-padding-width:1px !default;
+
   ion-title {
     position: absolute;
     top: 0;
@@ -48,4 +49,47 @@ page-post-list {
     text-overflow: ellipsis;
     margin-top: 3px
   }
+
+  .post-info-bar{
+    position: relative;
+    .post-info{
+      padding-left: 8px;
+      color: #898989;
+      font-size: 12px;
+    }
+    .heart-wrap{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      pointer-events: none;
+    }
+  }
+
+  .heart {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: fave-heart 1s steps(28);
+  }
+  .heart:hover {
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+  }
+
 }
+
+
+  @keyframes fave-heart {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -2800px 0;
+    }
+  }

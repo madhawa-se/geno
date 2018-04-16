@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class CommonServiceProvider {
-  //public REST_URL:string = 'http://localhost/logintest/';
+  //public REST_URL:string = 'http://localhost/instantfeed/';
   public REST_URL:string = 'http://slcog.lk/instantfeed/';
 
 

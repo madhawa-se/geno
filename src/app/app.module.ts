@@ -13,6 +13,8 @@ import { LoginPage } from '../pages/login/login';
 
 import { ProfilePage } from '../pages/profile/profile';
 
+import { SocialSharing } from '@ionic-native/social-sharing';
+
 import { SignupPage } from '../pages/signup/signup';
 import { SignupEmailPage } from '../pages/signup/signup-email';
 import { SignupPasswordPage } from '../pages/signup/signup-password';
@@ -80,6 +82,7 @@ import { FcMserviceProvider } from '../providers/fc-mservice/fc-mservice';
     CommonServiceProvider,
     AdminServiceProvider,
     FcMserviceProvider,
+    SocialSharing
 
   ]
 })

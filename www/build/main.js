@@ -117,7 +117,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\User\Desktop\ionicapp\geno\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding no-bounce>\n  <!--<div ion-fixed class="fullscreen">-->\n    <ion-icon name="arrow-back" color="light" (click)="doBack()"></ion-icon>\n\n    <form [formGroup]="loginForm">\n        <ion-list no-lines>\n            <h1 ion-text class="title text-center" color="light">SLCOG FEED</h1>\n            <p class="subtitle text-center">Instant Feed</p>\n            <ion-item>                \n                <ion-icon name="mail" item-left></ion-icon>\n                <ion-input formControlName="email" type="email" placeholder="Email Address" [(ngModel)]="userInfo.email"> </ion-input>                \n            </ion-item>\n\n            <ion-item>\n                <ion-icon name="lock" item-left></ion-icon>\n                <ion-input formControlName="password" type="password" placeholder="Password" [(ngModel)]="userInfo.password"></ion-input>\n            </ion-item>\n            \n            <button ion-button color="light" (click)="signIn(form)" [disabled]="!loginForm.valid" block outline>LOGIN</button>\n            <p ion-text color="light" class="text-center">\n                Don\'t have an account?\n                <a ion-text color="light" (click)="navigateSignup()">Signup.</a>\n            </p>\n            <button ion-button color="light" (click)="doForgotPassword()" clear block>Forgot Password?</button>\n        </ion-list>\n    </form>\n  <!--</div>-->\n</ion-content>'/*ion-inline-end:"C:\Users\User\Desktop\ionicapp\geno\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\User\Desktop\ionicapp\geno\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="secondary">\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding no-bounce>\n  <!--<div ion-fixed class="fullscreen">-->\n    <ion-icon name="arrow-back" color="light" (click)="doBack()"></ion-icon>\n\n    <form [formGroup]="loginForm">\n        <ion-list no-lines>\n            <h1 ion-text class="title text-center" color="light">SLCOG FEED</h1>\n            <p class="subtitle text-center">Instant Feed</p>\n            <ion-item>                \n                <ion-icon name="mail" item-left></ion-icon>\n                <ion-input formControlName="email" type="email" placeholder="Email Address" [(ngModel)]="userInfo.email"> </ion-input>                \n            </ion-item>\n\n            <ion-item>\n                <ion-icon name="lock" item-left></ion-icon>\n                <ion-input formControlName="password" type="password" placeholder="Password" [(ngModel)]="userInfo.password"></ion-input>\n            </ion-item>\n            \n            <button ion-button color="light" (click)="signIn(form)" [disabled]="!loginForm.valid" block outline>LOGIN</button>\n            <p ion-text color="light" class="text-center">\n                Don\'t have an account?\n                <a ion-text color="light" (click)="navigateSignup()">Signup.</a>\n            </p>\n            <button ion-button color="light" (click)="doForgotPassword()" clear block>Forgot Password?</button>\n        </ion-list>\n    </form>\n  <!--</div>-->\n</ion-content>'/*ion-inline-end:"C:\Users\User\Desktop\ionicapp\geno\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_fc_mservice_fc_mservice__["a" /* FcMserviceProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
     ], LoginPage);
@@ -174,79 +174,6 @@ var ProfilePage = /** @class */ (function () {
 /***/ }),
 
 /***/ 113:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_admin_service_admin_service__ = __webpack_require__(172);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the AdminPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AdminPage = /** @class */ (function () {
-    function AdminPage(navCtrl, navParams, adminService) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.adminService = adminService;
-        this.getNewUsers();
-    }
-    AdminPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AdminPage');
-    };
-    AdminPage.prototype.getNewUsers = function () {
-        var _this = this;
-        this.adminService.getNewUsers().then(function (result) {
-            _this.newUsers = result;
-            console.log(_this.newUsers);
-            console.log(result);
-        }, function (err) {
-            console.log(err);
-        });
-    };
-    AdminPage.prototype.activateUser = function (id) {
-        var _this = this;
-        this.adminService.activateUser(id).then(function (result) {
-            for (var i in _this.newUsers) {
-                if (_this.newUsers[i].id == id) {
-                    _this.newUsers[i].activated = true;
-                }
-            }
-            console.log(_this.newUsers);
-            console.log(result);
-        }, function (err) {
-            console.log(err);
-        });
-    };
-    AdminPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-admin',template:/*ion-inline-start:"C:\Users\User\Desktop\ionicapp\geno\src\pages\admin\admin.html"*/'<!--\n  Generated template for the AdminPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>admin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-list>\n  <ion-item *ngFor="let user of newUsers">\n    <ion-thumbnail item-start>\n      <img src="assets/imgs/admin.png">\n    </ion-thumbnail>\n    <h2>{{user.name}}</h2>\n    <p>20 hours ago</p>\n    <button ion-button icon-left  ion-button clear item-end color="secondary" (click)="activateUser(user.id)" ng-disabled="user.activated">\n	  <ion-icon name="{{ (user.activated)?\'checkmark-circle\':\'ios-checkmark\' }}"></ion-icon>\n	  {{ (user.activated)?\'activated\':\'activate\' }}\n	</button>\n  </ion-item>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\User\Desktop\ionicapp\geno\src\pages\admin\admin.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_admin_service_admin_service__["a" /* AdminServiceProvider */]])
-    ], AdminPage);
-    return AdminPage;
-}());
-
-//# sourceMappingURL=admin.js.map
-
-/***/ }),
-
-/***/ 114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -320,6 +247,79 @@ var PostPage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 114:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdminPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_admin_service_admin_service__ = __webpack_require__(172);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the AdminPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AdminPage = /** @class */ (function () {
+    function AdminPage(navCtrl, navParams, adminService) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.adminService = adminService;
+        this.getNewUsers();
+    }
+    AdminPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AdminPage');
+    };
+    AdminPage.prototype.getNewUsers = function () {
+        var _this = this;
+        this.adminService.getNewUsers().then(function (result) {
+            _this.newUsers = result;
+            console.log(_this.newUsers);
+            console.log(result);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    AdminPage.prototype.activateUser = function (id) {
+        var _this = this;
+        this.adminService.activateUser(id).then(function (result) {
+            for (var i in _this.newUsers) {
+                if (_this.newUsers[i].id == id) {
+                    _this.newUsers[i].activated = true;
+                }
+            }
+            console.log(_this.newUsers);
+            console.log(result);
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    AdminPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-admin',template:/*ion-inline-start:"C:\Users\User\Desktop\ionicapp\geno\src\pages\admin\admin.html"*/'<!--\n  Generated template for the AdminPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>admin</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-list>\n  <ion-item *ngFor="let user of newUsers">\n    <ion-thumbnail item-start>\n      <img src="assets/imgs/admin.png">\n    </ion-thumbnail>\n    <h2>{{user.name}}</h2>\n    <p>20 hours ago</p>\n    <button ion-button icon-left  ion-button clear item-end color="secondary" (click)="activateUser(user.id)" ng-disabled="user.activated">\n	  <ion-icon name="{{ (user.activated)?\'checkmark-circle\':\'ios-checkmark\' }}"></ion-icon>\n	  {{ (user.activated)?\'activated\':\'activate\' }}\n	</button>\n  </ion-item>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\User\Desktop\ionicapp\geno\src\pages\admin\admin.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_admin_service_admin_service__["a" /* AdminServiceProvider */]])
+    ], AdminPage);
+    return AdminPage;
+}());
+
+//# sourceMappingURL=admin.js.map
+
+/***/ }),
+
 /***/ 125:
 /***/ (function(module, exports) {
 
@@ -342,11 +342,11 @@ webpackEmptyAsyncContext.id = 125;
 
 var map = {
 	"../pages/admin/admin.module": [
-		299,
+		301,
 		3
 	],
 	"../pages/login/login.module": [
-		297,
+		298,
 		2
 	],
 	"../pages/post/post.module": [
@@ -354,7 +354,7 @@ var map = {
 		1
 	],
 	"../pages/profile/profile.module": [
-		298,
+		299,
 		0
 	]
 };
@@ -679,7 +679,8 @@ var AdminServiceProvider = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PostListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_post_service_post_service__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_social_sharing__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_post_service_post_service__ = __webpack_require__(89);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -692,6 +693,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the PostListPage page.
  *
@@ -699,10 +701,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var PostListPage = /** @class */ (function () {
-    function PostListPage(navCtrl, navParams, postServiceProvider) {
+    function PostListPage(navCtrl, navParams, postServiceProvider, socialSharing) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.postServiceProvider = postServiceProvider;
+        this.socialSharing = socialSharing;
+        this.page = 1;
+        this.postPerPage = 0;
+        this.totalData = 0;
         this.get_posts();
     }
     PostListPage.prototype.ionViewDidLoad = function () {
@@ -710,8 +716,8 @@ var PostListPage = /** @class */ (function () {
     };
     PostListPage.prototype.get_posts = function () {
         var _this = this;
-        this.postServiceProvider.getPosts().then(function (result) {
-            _this.stories = result;
+        this.postServiceProvider.getPosts(this.page).then(function (result) {
+            _this.stories = result.posts;
             console.log(result);
         }, function (err) {
             console.log(err);
@@ -722,11 +728,36 @@ var PostListPage = /** @class */ (function () {
     PostListPage.prototype.getRandomNum = function () {
         return Math.floor((Math.random() * 6) + 1);
     };
+    PostListPage.prototype.regularShare = function (index) {
+        var msg = "hello world";
+        this.socialSharing.share(msg, null, null, null);
+    };
+    PostListPage.prototype.likePost = function (index) {
+        this.stories[index].liked = true;
+    };
+    PostListPage.prototype.doInfinite = function (infiniteScroll) {
+        var _this = this;
+        this.page = this.page + 1;
+        setTimeout(function () {
+            _this.postServiceProvider.getPosts(_this.page).then(function (result) {
+                console.log(_this.stories);
+                console.log(result.posts);
+                _this.stories = _this.stories.concat(result.posts);
+                _this.postPerPage = result.post_per_page;
+                _this.totalData = result.total;
+                console.log(result);
+            }, function (err) {
+                console.log(err);
+            });
+            console.log('Async operation has ended');
+            infiniteScroll.complete();
+        }, 1000);
+    };
     PostListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-post-list',template:/*ion-inline-start:"C:\Users\User\Desktop\ionicapp\geno\src\pages\post\post-list.html"*/'<!--\n  Generated template for the PostListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  \n  <ion-navbar color="secondary">\n     <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>Instant Feed</ion-title>\n    <ion-buttons end>\n      <button ion-button small clear>Refresh</button>\n    </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n<ion-content>\n\n\n  <hr no-margin no-padding>\n  <div (swipe)="swipePage($event)">\n\n    <!-- Cards -->\n    <ion-card no-padding padding-bottom no-margin class="card" *ngFor="let s of stories">\n\n      <ion-row>\n        <ion-col col-10>\n          <ion-item>\n        <ion-avatar item-left>\n          <img src="assets/imgs/admin.png">\n        </ion-avatar>\n        <h2 style="font-weight: bold">admin</h2>\n        <p>srilanka</p>\n        \n      </ion-item>\n        </ion-col >\n        <ion-col col-2>\n          <button no-margin no-padding clear color="black" ion-button icon-only style="float: right; top: 15px" (click)="presentPostPopover()">\n            <ion-icon name="more"></ion-icon>\n        </button>\n        </ion-col>\n      </ion-row>\n      \n\n      <img src="http://lorempixel.com/500/400/nature/?id={{s.id}}">\n\n      <p no-margin no-padding>\n        <button clear ion-button icon-only  class="like-btn">\n          <ion-icon no-padding color="" class="icon-space"></ion-icon>\n        </button>\n        <button clear ion-button icon-only>\n          <ion-icon no-padding isActive="false" color="black" name="ios-text-outline" class="icon-space" style="font-weight: bold"></ion-icon>\n        </button>\n        <button clear ion-button icon-only (click)="get_posts()">\n          <ion-icon no-padding isActive="false" color="black" name="paper-plane" class="icon-space"></ion-icon>\n        </button>\n        <button no-margin no-padding clear color="black" ion-button icon-only style="float: right">\n          <ion-icon name="ios-bookmark-outline"></ion-icon>\n        </button>\n      </p>\n      <hr>\n\n      <ion-card-content>\n        <p class="like-content"><ion-icon name="heart"></ion-icon> 250 likes</p>\n        <p>{{s.title}}</p>\n      \n        <ion-note style="font-size: 12px">\n          11h ago\n        </ion-note>\n      </ion-card-content>\n\n    </ion-card>\n\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\ionicapp\geno\src\pages\post\post-list.html"*/,
+            selector: 'page-post-list',template:/*ion-inline-start:"C:\Users\User\Desktop\ionicapp\geno\src\pages\post\post-list.html"*/'<!--\n  Generated template for the PostListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  \n  <ion-navbar color="secondary">\n     <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>Instant Feed</ion-title>\n    <ion-buttons end>\n      <button ion-button small clear>Refresh</button>\n    </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n<ion-content>\n\n\n  <hr no-margin no-padding>\n  <div (swipe)="swipePage($event)">\n\n    <!-- Cards -->\n    <ion-card  class="card" *ngFor="let s of stories; let i = index;" margin-bottom >\n\n      <ion-row>\n        <ion-col col-10>\n          <ion-item>\n        <ion-avatar item-left>\n          <img src="assets/imgs/admin.png">\n        </ion-avatar>\n        <h2 style="font-weight: bold">admin</h2>\n        <p>{{s.elapsed}}</p>\n        \n      </ion-item>\n        </ion-col >\n        <ion-col col-2>\n          <button no-margin no-padding clear color="black" ion-button icon-only style="float: right; top: 15px" (click)="presentPostPopover()">\n            <ion-icon name="more" color="pink"></ion-icon>\n        </button>\n        </ion-col>\n      </ion-row>\n      \n\n      <img src="http://lorempixel.com/500/400/nature/?id={{s.id}}">\n\n      <div no-margin padding-left class="post-info-bar">\n        <button clear ion-button icon-only  class="like-btn" (click)="likePost(i)">\n          <ion-icon no-padding color="pink" name="heart" class="icon-heart"></ion-icon><span class="like-counter post-info">250 </span>\n          <div class="heart-wrap" [ngClass]="{\'heart\': s.liked}">\n            \n          </div>\n        </button>\n        <button clear ion-button icon-only  class="view">\n          <ion-icon no-padding color="blue" name="eye" class="icon-eye"></ion-icon><span class="view-counter post-info">68</span>\n        </button>\n       <!--  <button clear ion-button icon-only (click)="regularShare(1)">\n          <ion-icon no-padding  color="black" name="paper-plane" class="icon-share"></ion-icon>\n        </button> -->\n        <button no-margin no-padding clear color="black" ion-button icon-only style="float: right">\n          <ion-icon name="icon-eye" class="post-views post-info"></ion-icon>\n        </button>\n      </div>\n      <hr>\n\n      <ion-card-content>\n        <p>{{s.title}}</p>\n      \n        <ion-note style="font-size: 12px">\n          11h ago\n        </ion-note>\n      </ion-card-content>\n\n    </ion-card>\n\n     <ion-infinite-scroll (ionInfinite)="doInfinite($event)">\n       <ion-infinite-scroll-content></ion-infinite-scroll-content>\n     </ion-infinite-scroll>\n\n  </div>\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\User\Desktop\ionicapp\geno\src\pages\post\post-list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_post_service_post_service__["b" /* PostServiceProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_post_service_post_service__["b" /* PostServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_social_sharing__["a" /* SocialSharing */]])
     ], PostListPage);
     return PostListPage;
 }());
@@ -735,13 +766,13 @@ var PostListPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(237);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -749,7 +780,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 236:
+/***/ 237:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -758,34 +789,36 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_common_http__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(296);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_login_login__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_profile_profile__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_signup_signup__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup_email__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup_password__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_signup_profile_complete__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_post_post__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_post_post_list__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_post_post_view__ = __webpack_require__(296);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_admin_admin__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_auth_service_auth_service__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_post_service_post_service__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_common_service_common_service__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_admin_service_admin_service__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_fcm__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_fc_mservice_fc_mservice__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_social_sharing__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup_email__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup_password__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_signup_profile_complete__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_post_post__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_post_post_list__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_post_post_view__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_admin_admin__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_auth_service_auth_service__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_post_service_post_service__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_common_service_common_service__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_admin_service_admin_service__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_fcm__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_fc_mservice_fc_mservice__ = __webpack_require__(85);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -821,14 +854,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup_email__["a" /* SignupEmailPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup_password__["a" /* SignupPasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_signup_profile_complete__["a" /* ProfileCompletePage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_post_post__["a" /* PostPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_post_post_list__["a" /* PostListPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_post_post_view__["a" /* PostViewPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_admin_admin__["a" /* AdminPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup_email__["a" /* SignupEmailPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup_password__["a" /* SignupPasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_signup_profile_complete__["a" /* ProfileCompletePage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_post_post__["a" /* PostPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_post_post_list__["a" /* PostListPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_post_post_view__["a" /* PostViewPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_admin_admin__["a" /* AdminPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_profile_profile__["a" /* ProfilePage */]
             ],
             imports: [
@@ -839,8 +872,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/admin/admin.module#AdminPageModule', name: 'AdminPage', segment: 'admin', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/post/post.module#PostPageModule', name: 'PostPage', segment: 'post', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/post/post.module#PostPageModule', name: 'PostPage', segment: 'post', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/admin/admin.module#AdminPageModule', name: 'AdminPage', segment: 'admin', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -849,14 +882,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup_email__["a" /* SignupEmailPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup_password__["a" /* SignupPasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_signup_profile_complete__["a" /* ProfileCompletePage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_post_post__["a" /* PostPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_post_post_list__["a" /* PostListPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_post_post_view__["a" /* PostViewPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_admin_admin__["a" /* AdminPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup_email__["a" /* SignupEmailPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_signup_signup_password__["a" /* SignupPasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_signup_profile_complete__["a" /* ProfileCompletePage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_post_post__["a" /* PostPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_post_post_list__["a" /* PostListPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_post_post_view__["a" /* PostViewPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_admin_admin__["a" /* AdminPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_profile_profile__["a" /* ProfilePage */]
             ],
             providers: [
@@ -864,12 +897,13 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */],
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_24__ionic_native_fcm__["a" /* FCM */],
-                __WEBPACK_IMPORTED_MODULE_20__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_21__providers_post_service_post_service__["b" /* PostServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_22__providers_common_service_common_service__["a" /* CommonServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_23__providers_admin_service_admin_service__["a" /* AdminServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_25__providers_fc_mservice_fc_mservice__["a" /* FcMserviceProvider */],
+                __WEBPACK_IMPORTED_MODULE_25__ionic_native_fcm__["a" /* FCM */],
+                __WEBPACK_IMPORTED_MODULE_21__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_22__providers_post_service_post_service__["b" /* PostServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_23__providers_common_service_common_service__["a" /* CommonServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_24__providers_admin_service_admin_service__["a" /* AdminServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_26__providers_fc_mservice_fc_mservice__["a" /* FcMserviceProvider */],
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_social_sharing__["a" /* SocialSharing */]
             ]
         })
     ], AppModule);
@@ -967,7 +1001,7 @@ var AuthServiceProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 295:
+/***/ 296:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -977,11 +1011,11 @@ var AuthServiceProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_post_post__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_post_post__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_post_post_list__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_admin_admin__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_admin_admin__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_profile_profile__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_auth_service_auth_service__ = __webpack_require__(29);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1055,7 +1089,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 296:
+/***/ 297:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1124,7 +1158,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 */
 var CommonServiceProvider = /** @class */ (function () {
     function CommonServiceProvider() {
-        //public REST_URL:string = 'http://localhost/logintest/';
+        //public REST_URL:string = 'http://localhost/instantfeed/';
         this.REST_URL = 'http://slcog.lk/instantfeed/';
         console.log('Hello CommonServiceProvider Provider');
     }
@@ -1199,9 +1233,11 @@ var FcMserviceProvider = /** @class */ (function () {
         this.fcm.onNotification().subscribe(function (data) {
             if (data.wasTapped) {
                 console.log("Received in background");
+                alert("background");
             }
             else {
                 console.log("Received in foreground");
+                alert("foreground");
             }
             ;
         });
@@ -1364,15 +1400,14 @@ var PostServiceProvider = /** @class */ (function () {
     function PostServiceProvider(http, commonService) {
         this.http = http;
         this.commonService = commonService;
-        this.apiUrl = 'http://slcog.lk/instantfeed/';
         this.headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' });
         console.log('Hello PostService Provider');
         //this.local = new Storage(LocalStorage);
     }
-    PostServiceProvider.prototype.getPosts = function () {
+    PostServiceProvider.prototype.getPosts = function (page) {
         var _this = this;
         return new Promise(function (resolve) {
-            _this.http.get(_this.commonService.REST_URL + 'blog/get_blogs').subscribe(function (data) {
+            _this.http.get(_this.commonService.REST_URL + 'blog/get_blogs/' + page).subscribe(function (data) {
                 resolve(data);
             }, function (err) {
                 console.log(err);
@@ -1401,5 +1436,5 @@ var PostServiceProvider = /** @class */ (function () {
 
 /***/ })
 
-},[215]);
+},[216]);
 //# sourceMappingURL=main.js.map

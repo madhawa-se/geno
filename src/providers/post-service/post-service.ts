@@ -17,7 +17,6 @@ export class BlogModel {
 @Injectable()
 export class PostServiceProvider {
 
- apiUrl = 'http://slcog.lk/instantfeed/';
  headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' });
 
   constructor(public http: HttpClient,public commonService:CommonServiceProvider) {
@@ -25,9 +24,9 @@ export class PostServiceProvider {
     //this.local = new Storage(LocalStorage);
   }
 
-  getPosts() {
+  getPosts(page:number) {
   	return new Promise(resolve => {
-	    this.http.get(this.commonService.REST_URL+'blog/get_blogs').subscribe(data => {
+	    this.http.get(this.commonService.REST_URL+'blog/get_blogs/'+page).subscribe(data => {
 	      resolve(data);
 	    }, err => {
 	      console.log(err);

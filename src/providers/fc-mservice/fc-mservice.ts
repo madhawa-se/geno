@@ -42,8 +42,10 @@ export class FcMserviceProvider {
       this.fcm.onNotification().subscribe(data=>{
         if(data.wasTapped){
           console.log("Received in background");
+          alert("background");
         } else {
           console.log("Received in foreground");
+          alert("foreground");
         };
       })
       this.fcm.onTokenRefresh().subscribe(token=>{

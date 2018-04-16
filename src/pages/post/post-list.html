@@ -26,7 +26,7 @@
   <div (swipe)="swipePage($event)">
 
     <!-- Cards -->
-    <ion-card no-padding padding-bottom no-margin class="card" *ngFor="let s of stories">
+    <ion-card  class="card" *ngFor="let s of stories; let i = index;" margin-bottom >
 
       <ion-row>
         <ion-col col-10>
@@ -35,13 +35,13 @@
           <img src="assets/imgs/admin.png">
         </ion-avatar>
         <h2 style="font-weight: bold">admin</h2>
-        <p>srilanka</p>
+        <p>{{s.elapsed}}</p>
         
       </ion-item>
         </ion-col >
         <ion-col col-2>
           <button no-margin no-padding clear color="black" ion-button icon-only style="float: right; top: 15px" (click)="presentPostPopover()">
-            <ion-icon name="more"></ion-icon>
+            <ion-icon name="more" color="pink"></ion-icon>
         </button>
         </ion-col>
       </ion-row>
@@ -49,24 +49,26 @@
 
       <img src="http://lorempixel.com/500/400/nature/?id={{s.id}}">
 
-      <p no-margin no-padding>
-        <button clear ion-button icon-only  class="like-btn">
-          <ion-icon no-padding color="" class="icon-space"></ion-icon>
+      <div no-margin padding-left class="post-info-bar">
+        <button clear ion-button icon-only  class="like-btn" (click)="likePost(i)">
+          <ion-icon no-padding color="pink" name="heart" class="icon-heart"></ion-icon><span class="like-counter post-info">250 </span>
+          <div class="heart-wrap" [ngClass]="{'heart': s.liked}">
+            
+          </div>
         </button>
-        <button clear ion-button icon-only>
-          <ion-icon no-padding isActive="false" color="black" name="ios-text-outline" class="icon-space" style="font-weight: bold"></ion-icon>
+        <button clear ion-button icon-only  class="view">
+          <ion-icon no-padding color="blue" name="eye" class="icon-eye"></ion-icon><span class="view-counter post-info">68</span>
         </button>
-        <button clear ion-button icon-only (click)="get_posts()">
-          <ion-icon no-padding isActive="false" color="black" name="paper-plane" class="icon-space"></ion-icon>
-        </button>
+       <!--  <button clear ion-button icon-only (click)="regularShare(1)">
+          <ion-icon no-padding  color="black" name="paper-plane" class="icon-share"></ion-icon>
+        </button> -->
         <button no-margin no-padding clear color="black" ion-button icon-only style="float: right">
-          <ion-icon name="ios-bookmark-outline"></ion-icon>
+          <ion-icon name="icon-eye" class="post-views post-info"></ion-icon>
         </button>
-      </p>
+      </div>
       <hr>
 
       <ion-card-content>
-        <p class="like-content"><ion-icon name="heart"></ion-icon> 250 likes</p>
         <p>{{s.title}}</p>
       
         <ion-note style="font-size: 12px">
@@ -75,6 +77,10 @@
       </ion-card-content>
 
     </ion-card>
+
+     <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+       <ion-infinite-scroll-content></ion-infinite-scroll-content>
+     </ion-infinite-scroll>
 
   </div>
 </ion-content>
